@@ -208,15 +208,18 @@
         },
         success: function(){
             this.endTime = new Date();
-            if(confirm("你赢了!记录为"+Math.floor(this.endTime-this.beginTime)/1000 + "秒!是否开始新游戏?")){
-                jms = null;
-                beginGame();
-            } else {
-                this.unbindAll();
-                jms = null;
-            }
+            setTimeout(
+                function(){
+                    if(confirm("你赢了!记录为"+Math.floor(this.endTime-this.beginTime)/1000 + "秒!是否开始新游戏?")){
+                        jms = null;
+                        beginGame();
+                    } else {
+                        this.unbindAll();
+                        jms = null;
+                    }
             
-
+                });
+            
         },
         failed: function(){
             this.showAllLand();
