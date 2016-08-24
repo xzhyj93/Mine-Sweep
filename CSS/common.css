@@ -1,0 +1,107 @@
+.main {
+  width: 1100px;
+  height: 900px;
+  margin: 30px;
+  background: #eee;
+  margin: 0 auto;
+}
+.main aside {
+  margin: 10px;
+  float: right;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 15px;
+}
+.main aside div {
+  padding: 10px 0;
+}
+.main aside #start {
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+}
+.main aside .tips {
+  padding: 0;
+}
+.main aside .tips ol {
+  padding-left: 5px;
+}
+.main aside .number {
+  color: red;
+  font-size: 2em;
+  padding: 10px;
+}
+.main section {
+  float: left;
+  width: 800px;
+  height: 850px;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+}
+.main section .sweep {
+  background: #aaa;
+  padding: 0;
+  margin: 0;
+}
+.main section .sweep .brick {
+  background: #c4c4c4;
+  -webkit-box-sizing: border-box;
+  margin: 1px;
+  float: left;
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+}
+.main section .sweep .no-mine {
+  background: #eee;
+  text-align: center;
+  border-left: 1px solid grey;
+  border-left: 1px solid #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+.main section .sweep .flag {
+  background-image: url("../img/flag40.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.main section .sweep .bomb {
+  background: #eee;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url("../img/bomb40.png");
+  background-position: center;
+  border-left: 1px solid #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+.main section .sweep .wrong-flag {
+  background-image: url("../img/wrong.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.background-size {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.in-center {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+}

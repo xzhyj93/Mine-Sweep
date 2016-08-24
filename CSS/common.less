@@ -1,0 +1,104 @@
+.main{
+    width:1100px;
+    height:900px;
+    margin:30px;
+    background:#eee;
+    margin:0 auto;
+}
+.main{
+    aside{
+        margin:10px;
+        float:right;
+        width: 150px;
+        padding:20px;
+        text-align: center;
+        line-height: 25px;
+        font-size: 15px;
+
+        div{
+            padding:10px 0;
+        }
+        #start{
+            width:80px;
+            height:30px;
+            margin:10px;
+        }
+        .tips{
+            padding:0;
+            ol{
+                padding-left:5px;
+            }
+        }
+        .number{
+            color:red;
+            font-size:2em;
+            padding:10px;
+        }
+    }
+}
+.main{
+    section{
+        float:left;
+        width:800px;
+        height:850px;
+        .in-center;
+        .sweep{
+            background:#aaa;
+            padding:0;
+            margin:0;
+            .brick{
+                background:#c4c4c4;
+                -webkit-box-sizing: border-box;
+                margin:1px;
+                float: left;
+                .border-style(white, #aaa);
+
+            }
+            .no-mine{
+                background:#eee;
+                text-align:center;
+                border-left:1px solid grey;
+                .border-style(#bbb,#e7e7e7);
+            }
+            .flag{
+                background-image:url("../img/flag40.png");
+                .background-size;
+                background-position: center;
+
+            }
+            .bomb{
+                background: #eee;
+                .background-size;
+                background-image: url("../img/bomb40.png");
+                background-position:center;
+                .border-style(#bbb,#e7e7e7);
+            }
+            .wrong-flag{
+                background-image: url("../img/wrong.png");
+                .background-size;
+                background-position: center;
+            }
+        }
+        
+    }
+
+}
+
+.background-size{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.in-center{
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    
+}
+.border-style(@lt,@rb){
+    border-left: 1px solid @lt;
+    border-top: 1px solid @lt;
+    border-right: 1px solid @rb;
+    border-bottom: 1px solid @rb;
+}
