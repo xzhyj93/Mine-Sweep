@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>扫雷网页版</title>
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+</head>
+<body>
+<div class="main">
+    <aside>
+        <div id="remaining">
+            剩余雷数:<span class="number">0</span>个
+        </div>
+        <div id="cost-time">
+            持续时间:<span class="number">0</span>秒
+        </div>
+        <fieldset>
+            <legend>难度选择:</legend>
+            <input id="level1" name="level" type="radio" checked="true" value="10" data-row="10" data-col="10">初级 (10*10) [10颗地雷]</input><br>
+            <input id="level2" name="level" type="radio" value="40"  data-row="16" data-col="16">中级 (16*16)[40颗地雷]</input><br>
+            <input id="level3" name="level" type="radio" value="99"  data-row="30" data-col="25">高级 (30*25)[99颗地雷]</input><br>
+        </fieldset>
+        <input type="button" id="start" value="开始游戏"><br>
+        <div class="tips">
+            <ol>
+                <li>点击"开始游戏"开始计时</li>
+                <li>游戏过程中点击"开始游戏"会开始新游戏</li>
+            </ol>
+        </div>
+    </aside>
+    <section>
+        <div class="sweep">
+
+        </div>
+    </section>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
