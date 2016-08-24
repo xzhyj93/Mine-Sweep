@@ -1,5 +1,5 @@
 # Mine-Sweep
-用JavaScrip实现的扫雷游戏
+用JavaScript 实现的扫雷游戏
 
 支持三种难度系数 10/30/99颗雷
 
