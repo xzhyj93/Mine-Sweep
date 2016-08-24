@@ -43,12 +43,11 @@
         },
         init: function(){
             var allCount = this.rowCount * this.colCount;
-            for(var i=0; i<this.landMineCount; i++){
+            for(this.mines=[]; this.mines.length<this.landMineCount;){
                 var rand = Math.floor(Math.random() * allCount);
-                if(rand in this.mines){
-                    i--;
+                if($.inArray(rand, this.mines)!=-1){
                     continue;
-                } else {
+                } else {    
                     this.mines.push(rand);
                     var row = Math.floor(rand/(this.rowCount));
                     var col = rand%(this.colCount);
@@ -124,12 +123,15 @@
                                 var count = $('#remaining span').html();
                                 if($(this).attr('class').indexOf('flag') != -1){
                                     self.markMineCount ++;
-                                    $('#remaining span').html(--self.remainingCount);
+                                    $('#remaining span').html(self.landMineCount - self.markMineCount);
+                                    if(self.markMineCount + self.setupCount == self.rowCount*self.colCount){
+                                        self.success();
+                                    }
                                 } else {
                                     self.markMineCount --;
-                                    $('#remaining span').html(++self.remainingCount);
+                                    $('#remaining span').html(self.landMineCount - self.markMineCount);
                                 }
-                                var remaining = self.landMineCount - self.flagMineCount;
+                                var remaining = self.landMineCount - self.markMineCount;
                                 $("#remaining>span").html = remaining;
                     
                             } else if(mouseNum == 0){
@@ -192,6 +194,7 @@
                         $(obj).addClass('no-mine');
                     }
                     if(this.setupCount + this.markMineCount == this.rowCount * this.colCount){
+
                         this.showAllLand();
                         this.success();
                     }
@@ -201,6 +204,7 @@
                     }
                 } else {
                     this.showAllLand();
+                    $(obj).css('background-color','red');
                     this.failed();
                 }
             }
@@ -208,6 +212,7 @@
         },
         success: function(){
             this.endTime = new Date();
+ 
             var self = this;
             setTimeout(
                 function(){
@@ -215,7 +220,7 @@
                         jms = null;
                         beginGame();
                     } else {
-                        se;f.unbindAll();
+                        self.unbindAll();
                         jms = null;
                     }
             
