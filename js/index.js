@@ -208,17 +208,18 @@
         },
         success: function(){
             this.endTime = new Date();
+            var self = this;
             setTimeout(
                 function(){
-                    if(confirm("你赢了!记录为"+Math.floor(this.endTime-this.beginTime)/1000 + "秒!是否开始新游戏?")){
+                    if(confirm("你赢了!记录为"+Math.floor(self.endTime-self.beginTime)/1000 + "秒!是否开始新游戏?")){
                         jms = null;
                         beginGame();
                     } else {
-                        this.unbindAll();
+                        se;f.unbindAll();
                         jms = null;
                     }
             
-                });
+                },200);
             
         },
         failed: function(){
