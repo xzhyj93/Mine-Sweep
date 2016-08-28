@@ -14,6 +14,7 @@
         this.endTime = null;
         this.remainingCount = landMineCount || 10;
         
+
         document.oncontextmenu = function(){
             return false;       //禁用右键菜单
         }
@@ -137,6 +138,7 @@
                             } else if(mouseNum == 0){
                                 self.openBlock.call(self, this, row, col);
                             }
+                            e.stopPropagation();
                         })
                     })(i,j);
 
@@ -238,7 +240,7 @@
                 } else {
                     self.unbindAll();
                 }
-            },200);
+            },500);
             
             
             

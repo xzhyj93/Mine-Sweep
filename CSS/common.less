@@ -41,14 +41,21 @@
         float:left;
         width:800px;
         height:850px;
-        .in-center;
+        .in-center;S
         .sweep{
             background:#aaa;
             padding:0;
             margin:0;
+            -moz-user-select:none;
+            -o-user-select:none;
+            -webkit-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
             .brick{
                 background:#c4c4c4;
                 -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing:border-box;
                 margin:1px;
                 float: left;
                 .border-style(white, #aaa);
@@ -94,6 +101,12 @@
     display: -webkit-flex;
     -webkit-align-items: center;
     -webkit-justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    display:-moz-flex;
+    -moz-align-items:center;
+    -moz-justify-content:center;
     
 }
 .border-style(@lt,@rb){

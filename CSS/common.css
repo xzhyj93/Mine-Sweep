@@ -40,15 +40,28 @@
   display: -webkit-flex;
   -webkit-align-items: center;
   -webkit-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: -moz-flex;
+  -moz-align-items: center;
+  -moz-justify-content: center;
 }
-.main section .sweep {
+.main section S .sweep {
   background: #aaa;
   padding: 0;
   margin: 0;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.main section .sweep .brick {
+.main section S .sweep .brick {
   background: #c4c4c4;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 1px;
   float: left;
   border-left: 1px solid #ffffff;
@@ -56,7 +69,7 @@
   border-right: 1px solid #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
 }
-.main section .sweep .no-mine {
+.main section S .sweep .no-mine {
   background: #eee;
   text-align: center;
   border-left: 1px solid grey;
@@ -65,7 +78,7 @@
   border-right: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
 }
-.main section .sweep .flag {
+.main section S .sweep .flag {
   background-image: url("../img/flag40.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -73,7 +86,7 @@
   background-size: cover;
   background-position: center;
 }
-.main section .sweep .bomb {
+.main section S .sweep .bomb {
   background: #eee;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -86,7 +99,7 @@
   border-right: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
 }
-.main section .sweep .wrong-flag {
+.main section S .sweep .wrong-flag {
   background-image: url("../img/wrong.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -104,4 +117,10 @@
   display: -webkit-flex;
   -webkit-align-items: center;
   -webkit-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: -moz-flex;
+  -moz-align-items: center;
+  -moz-justify-content: center;
 }
